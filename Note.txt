@@ -1,0 +1,13 @@
+-"db.js":
+	file này khai báo ra 1 mảng các object lưu thông tin cho envelope
+-"controller/envelopes.js":
+	tạo ra các fuction xử lí request tạo response, middle ware => export
+-"routes/envelopes.js":
+	tạo route,get request, post... với các callback(req, res, next ) import từ evelope.js(controller) và export.
+-"helper/db-helper.js": 
+	tạo các function hỗ trợ tạo, tìm , xóa, dữ liệu trong mảng ở file "db.js"
+
+-"app.js": 
+	file chính của ứng dụng: import morgan theo dõi log, import express tạo listenning to port, import dotenv tạo các biến môi trường và
+	sử dụng
+	

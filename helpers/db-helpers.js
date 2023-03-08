@@ -24,18 +24,14 @@ const createEnvelope = (instance)=>{
 }
 
 const deleteEnvelopeById = (id) =>{
-    if(envelopes.id === undefined || envelopes.id < 0){
-        console.log("Invalid Id!!!");
-    }else{
-        envelopes.splice(findEnvelopeById(id).id -1);
-    }
+        envelopes.splice(findEnvelopeById(id).id -1,1);
 
 }
 
 module.exports = {
     findEnvelopeById,
     createEnvelope,
-    createEnvelope
+    deleteEnvelopeById
 }
 
 

@@ -1,4 +1,11 @@
--"db.js":
+Envelope Budgeting
+
+-tạo danh mục chi tiêu cho ngân sách
+-chia nhãn cho từng mục (có thể gom các mục vào 1 nhãn)
+-chia tiền (mốc đặt ra)cho từng nhãn tương ứng
+
+
+-"db.js": done
 	file này khai báo ra 1 mảng các object lưu thông tin cho envelope
 -"controller/envelopes.js":
 	tạo ra các fuction xử lí request tạo response, middle ware => export
@@ -10,4 +17,4 @@
 -"app.js": 
 	file chính của ứng dụng: import morgan theo dõi log, import express tạo listenning to port, import dotenv tạo các biến môi trường và
 	sử dụng
-	
+

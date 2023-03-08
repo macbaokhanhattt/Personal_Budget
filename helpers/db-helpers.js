@@ -1,5 +1,6 @@
 const {envelopes} = require("../config/db");
 
+
 const findEnvelopeById = (id) =>{
     if(envelopes.filter(envelope => envelope.id === id).length > 0)
     {
@@ -8,6 +9,7 @@ const findEnvelopeById = (id) =>{
         console.log("Invalid Id!!!");
     }
 }
+
 
 
 const createEnvelope = (instance)=>{
@@ -28,6 +30,12 @@ const deleteEnvelopeById = (id) =>{
         envelopes.splice(findEnvelopeById(id).id -1);
     }
 
+}
+
+module.exports = {
+    findEnvelopeById,
+    createEnvelope,
+    createEnvelope
 }
 
 

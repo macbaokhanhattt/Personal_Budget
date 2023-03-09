@@ -12,16 +12,15 @@ const findEnvelopeById = (id) =>{
 
 
 
-const createEnvelope = (instance)=>{
-    const lastestRecord = envelopes[envelopes.length-1];
-    const newId = lastestRecord.id +1;
-    if(findEnvelopeById(instance.id).length =1 || instance.id <0 || instance.id === undefined){
-        console.log("Invalid Envelop, recreate");
-    }else{
-        envelopes.push(instance);
-        instance.id = newId;
-    }
+const createNewId = (envelopesarray)=>{
+  const lastestRecord = envelopesarray[envelopesarray.length -1];
+  const ID = lastestRecord.id + 1;
+
+  return ID;
+
+
 }
+
 
 const deleteEnvelopeById = (id) =>{
         envelopes.splice(findEnvelopeById(id).id -1,1);
@@ -30,7 +29,7 @@ const deleteEnvelopeById = (id) =>{
 
 module.exports = {
     findEnvelopeById,
-    createEnvelope,
+    createNewId,
     deleteEnvelopeById
 }
 
